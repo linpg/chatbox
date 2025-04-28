@@ -5,29 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>线上客服线路</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function openService(url, lineName) {
+            // 自动加上 from 参数
+            const targetUrl = url + (url.includes('?') ? '&' : '?') + 'from=' + encodeURIComponent(lineName);
+            window.open(targetUrl, '_blank');
+        }
+    </script>
 </head>
-<body class="bg-gradient-to-b from-gray-900 to-gray-800 flex flex-col items-center justify-center h-screen text-gray-200">
-    <h1 class="text-4xl font-extrabold mb-6 text-white drop-shadow-lg font-sans tracking-wide">线上客服线路选择</h1>
-    <p class="text-xl text-red-500 font-bold mb-8">如等待过久，请重新选择其他线路</p>
-    <div class="flex flex-col gap-8">
-        <button onclick="window.open('https://li899.chatbox.one/member/login')" 
-            class="px-12 py-6 text-2xl bg-gradient-to-r from-gray-700 to-gray-600 text-white font-semibold rounded-full shadow-xl hover:from-gray-600 hover:to-gray-500 transition-all">
+<body class="bg-gradient-to-b from-gray-900 to-gray-800 flex flex-col items-center justify-center min-h-screen text-gray-200 p-6">
+    <h1 class="text-4xl font-extrabold mb-6 text-white drop-shadow-lg tracking-wide">线上客服线路选择</h1>
+    <p class="text-xl text-red-500 font-bold mb-8 text-center">如等待过久，请重新选择其他线路</p>
+
+    <div class="flex flex-col gap-6 w-full max-w-md">
+        <button onclick="openService('https://li899.chatbox.one/member/login', 'line1')" 
+            class="px-8 py-4 text-2xl bg-gradient-to-r from-blue-600 to-blue-500 text-white font-semibold rounded-full shadow-lg hover:from-blue-500 hover:to-blue-400 transition-all">
             客服线路1
         </button>
-        <button onclick="window.open('https://winc888.chatbox.one/member/mlogin')" 
-            class="px-12 py-6 text-2xl bg-gradient-to-r from-gray-700 to-gray-600 text-white font-semibold rounded-full shadow-xl hover:from-gray-600 hover:to-gray-500 transition-all">
+        <button onclick="openService('https://winc888.chatbox.one/member/mlogin', 'line2')" 
+            class="px-8 py-4 text-2xl bg-gradient-to-r from-green-600 to-green-500 text-white font-semibold rounded-full shadow-lg hover:from-green-500 hover:to-green-400 transition-all">
             客服线路2
         </button>
-        <button onclick="window.open('https://li899.chatbox.sk/member/mlogin')" 
-            class="px-12 py-6 text-2xl bg-gradient-to-r from-gray-700 to-gray-600 text-white font-semibold rounded-full shadow-xl hover:from-gray-600 hover:to-gray-500 transition-all">
+        <button onclick="openService('https://li899.chatbox.sk/member/mlogin', 'line3')" 
+            class="px-8 py-4 text-2xl bg-gradient-to-r from-purple-600 to-purple-500 text-white font-semibold rounded-full shadow-lg hover:from-purple-500 hover:to-purple-400 transition-all">
             客服线路3
         </button>
- <button onclick="window.open('https://winc888.chatbox.cc/member/mlogin')" 
-            class="px-12 py-6 text-2xl bg-gradient-to-r from-gray-700 to-gray-600 text-white font-semibold rounded-full shadow-xl hover:from-gray-600 hover:to-gray-500 transition-all">
+        <button onclick="openService('https://winc888.chatbox.cc/member/mlogin', 'line4')" 
+            class="px-8 py-4 text-2xl bg-gradient-to-r from-pink-600 to-pink-500 text-white font-semibold rounded-full shadow-lg hover:from-pink-500 hover:to-pink-400 transition-all">
             客服线路4
         </button>
- <button onclick="window.open('https://winc888.chatbox.sk/member/mlogin')" 
-            class="px-12 py-6 text-2xl bg-gradient-to-r from-gray-700 to-gray-600 text-white font-semibold rounded-full shadow-xl hover:from-gray-600 hover:to-gray-500 transition-all">
+        <button onclick="openService('https://winc888.chatbox.sk/member/mlogin', 'line5')" 
+            class="px-8 py-4 text-2xl bg-gradient-to-r from-yellow-600 to-yellow-500 text-white font-semibold rounded-full shadow-lg hover:from-yellow-500 hover:to-yellow-400 transition-all">
             客服线路5
         </button>
     </div>
